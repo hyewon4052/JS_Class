@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>String 내장 함수</title>
+</head>
+<body>
+    <script>
+        // length : 문자열의 길이를 리턴
+        // var txt = "dfsdfjsdkfjkfjkdjfkjkfjkjdjsfsljsd";
+        // console.log(txt.length);
+
+        // indexOf
+        var str = "Please locate where 'locate'";
+        // console.log(str);
+        // console.log(str.indexOf("locate"));     // 출력값 : 7
+        // console.log(str.indexOf("choi"));       // 출력값 : -1
+
+        // if (str.indexOf("locate") > -1 ) {
+        //     console.log("locate 문자 발견");
+        // }
+
+        // lastIndexOf
+        // console.log(str.lastIndexOf("locate"));     // 출력값 : 21
+
+        // search 
+        // console.log(str.search("locate"));  
+
+        // slice ********
+        var str = "Apple, Banana, Kiwi";
+        // console.log(str.slice(7,13));        // 출력값 : Banana ( 7부터 13 - 1까지 )
+        // console.log(str.slice(7));           // 출력값 : Banana, Kiwi    ( 7부터 끝까지 )
+        // console.log(str.slice(-12,-6));      // 출력값 : Banana    ( -12부터 -6까지 (뒤에서부터))
+        // console.log(str.slice(-12));         // 출력값 : Banana, Kiwi ( -12부터 끝까지 )
+
+        // substring    (slice와 같음)
+        // console.log(str.substring(7,13));       // 출력값 : Banana
+        
+        // substr   ( 첫번째 파라미터부터 두번째 파라미터 글자만큼 )
+        // console.log(str.substr(7,6));           // 출력값 : Banana
+        
+        // var jumin1 = "070828";
+        // console.log(jumin1.substr(0,2));
+        // console.log(jumin1.substr(2,2));
+        // console.log(jumin1.substr(4,2));
+
+        // var jumin2 = "2007-08-28";
+        // console.log(jumin2.indexOf("-"));
+        // console.log(jumin2.substring(0,jumin2.indexOf("-")))
+        
+        // replace
+        // var str1 = "Please visit here";
+        // var str2 = str1.replace("here","there");
+        // console.log(str2);
+
+        // var str3 = "Please visit here here here";
+        // var str4 = str3.replace("here","there");
+        // console.log(str4);
+
+        // 정규 표현식
+        var str5 = "Please visit here here here";
+        var str6 = str5.replace(/here/g,"there");      // g = global (전체)
+        console.log(str6);
+
+        var str7 = "Please visit Here hERe herE";
+        var str8 = str7.replace(/here/gi,"there");      // i = ignore (대소문자 구분 x)
+        console.log(str8);
+
+        // 대문자로 : uppercase
+        var str9 = "Please visit here here here";
+        console.log(str9.toUpperCase());
+
+        // 소문자로 : lowercase
+        var str10 = "Please visit hERE HERE HERE";
+        console.log(str9.toLowerCase());
+
+        // 데이터베이스 : JOHN, joHn, John
+    </script>
+</body>
+</html>
