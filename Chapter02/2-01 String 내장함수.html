@@ -56,23 +56,59 @@
         // console.log(str4);
 
         // 정규 표현식
-        var str5 = "Please visit here here here";
-        var str6 = str5.replace(/here/g,"there");      // g = global (전체)
-        console.log(str6);
+        // var str5 = "Please visit here here here";
+        // var str6 = str5.replace(/here/g,"there");      // g = global (전체)
+        // console.log(str6);
 
-        var str7 = "Please visit Here hERe herE";
-        var str8 = str7.replace(/here/gi,"there");      // i = ignore (대소문자 구분 x)
-        console.log(str8);
+        // var str7 = "Please visit Here hERe herE";
+        // var str8 = str7.replace(/here/gi,"there");      // i = ignore (대소문자 구분 x)
+        // console.log(str8);
 
         // 대문자로 : uppercase
-        var str9 = "Please visit here here here";
-        console.log(str9.toUpperCase());
+        // var str9 = "Please visit here here here";
+        // console.log(str9.toUpperCase());
 
         // 소문자로 : lowercase
-        var str10 = "Please visit hERE HERE HERE";
-        console.log(str9.toLowerCase());
+        // var str10 = "Please visit hERE HERE HERE";
+        // console.log(str9.toLowerCase());
 
         // 데이터베이스 : JOHN, joHn, John
+
+        // var txt1 = "hello";
+        // var txt2 = "world";
+        // var txt3 = txt1+" "+txt2;
+        // console.log(txt3);
+        // console.log(txt1.concat(" ", txt2));
+        // console.log(txt1.concat(" ", "hong ","love ",txt2));
+        
+        // padStart
+        // var str11 = "1234";
+        // console.log(str11.padStart(8,0));
+        // console.log("C-"+ str11.padStart(8,0));     // 제품코드 자릿수 통일에 유용
+        
+        // 특정 자릿수를 통일하기 위해서 사용
+        // var str12 = "5"
+        // var str12 = "15"
+        // console.log(str12.padStart(2,0))
+
+        // var str12 = "5"
+        // var str12 = "15"
+        // console.log(str12.padEnd(4,0))
+
+        // charAt()     // 특정한 글자의 위치값
+        // var str13 = "Hello World";
+        // console.log(str13.charAt(0))
+
+
+        // ****** split
+        // var tags = "키보드 기계식 블루투스 휠마우스 광마우스";
+        // var arr1 = tags.split(" ");     // ,를 기준으로 배열로 만듦
+        // console.log(arr1)
+        
+        var birthday = "2007-08-28";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+        
     </script>
 </body>
 </html>
