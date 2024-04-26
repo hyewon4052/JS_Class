@@ -54,7 +54,7 @@
         // fruits4[fruits4.length-1] = "Peach";
         // console.log(fruits4)
 
-        // splice(a,b)  : a = 시작위치, b = 삭제할 항목 수 
+        // splice(a,b)  : a = 시작위치, b = 삭제할 항목 수  
         // var fruits5 = ["Banana","Orange","Apple"];
         // fruits5.splice(1,2);
         // console.log(fruits5);
@@ -166,7 +166,20 @@
         // });
         // console.log(total);
 
-        // map()
+
+        // map() : filter와는 다른 형태로 새로운 배열을 생성
+        
+        var userList = [
+            {fistName:"재석", lastName:"유", email:"yu@gmail.com"},
+            {fistName:"종국", lastName:"김", email:"kim@gmail.com"},
+            {fistName:"세찬", lastName:"양", email:"yang@gmail.com"},
+            {fistName:"석진", lastName:"지", email:"ji@gmail.com"}
+        ]; 
+
+        var userList2 = userList.map(function(user) {
+            return { fullName :user.lastName+ user.fistName, FN:user.fistName, IN:user.lastName }
+        });
+        console.log(userList2);
 </script>
 </body>
 </html>
