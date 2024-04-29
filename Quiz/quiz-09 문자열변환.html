@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>문자열 변환 (A를 #으로)</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer="";
+
+            // 방법1 : for문을 이용
+
+            // 방법 2 : replace와 정규표현식을 이용
+            answer = s.replace(/A/g,"#");      
+            return answer;
+        }
+        let str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
