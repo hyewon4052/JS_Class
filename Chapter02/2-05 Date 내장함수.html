@@ -3,6 +3,7 @@
     <title>Date 내장함수</title>
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script>
         // var d1 = new Date();
         // console.log(d1)
@@ -11,25 +12,25 @@
         // var d2 = new Date(2024, 11, 25, 18, 30);
         // console.log(d2);
 
-        var d3 = new Date();
-        console.log(d3);
+        // var d3 = new Date();
+        // console.log(d3);
 
-        var year = d3.getFullYear();
-        console.log("Year", year);
+        // var year = d3.getFullYear();
+        // console.log("Year", year);
 
-        var month = d3.getMonth();
-        console.log("Month",month+1);
+        // var month = d3.getMonth();
+        // console.log("Month",month+1);
 
-        var date = d3.getDate();
-        console.log("Date ", date);
+        // var date = d3.getDate();
+        // console.log("Date ", date);
 
-        var day = d3.getDay();
-        console.log("Day, ", day);
+        // var day = d3.getDay();
+        // console.log("Day, ", day);
 
-        var hour = d3.getHours();
-        var min = d3.getMinutes();
-        var seconds = d3.getSeconds();
-        console.log(hour,month,seconds);
+        // var hour = d3.getHours();
+        // var min = d3.getMinutes();
+        // var seconds = d3.getSeconds();
+        // console.log(hour,month,seconds);
 
         // 글로벌 서비스일 경우 접속한 국가의 타임존을 고려
         // 2024.04.19 15:05:10 (한국)   -->     2024.04.19 06:05:10 서버에 저장
@@ -38,7 +39,31 @@
         // 서버에는 한국 시간대를 자동으로 영국 기준시로 변경해서 저장해야 함.
         // 서버에 접속한 국가는 각각의 시간대를 + 해야함
 
+        var d4 = new Date();
+        console.log(d4.getTimezoneOffset());    // 출력값(분단위) : -540분 -> 9시간
+        
+        // 특정 날짜와 시간을 조정
+        // var d5 = new Date();
+        // d5.setFullYear(2007);
+        // d5.setMonth(7);     // 월은 0부터 시작
+        // d5.setDate(28);
+        // console.log(d5);
 
+        // 실무에서는 moments.js 라이브러리    
+        console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        console.log(moment().format('dddd'));
+
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().format("MM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일전을 검색
+        console.log(moment().subtract(7,"days").format("MM DD, YYYY"));
+
+        // 오늘을 기준으로 100일 후는 언제일까요?
+        console.log(moment().add(100,"days").format("YYYY-MM-DD"));
+
+        // 지금을 기준으로 4시간 후
+        console.log(moment().add(4,"hours").format("YYYY-MM-DD HH"));
     </script>
 </body>
 </html>
