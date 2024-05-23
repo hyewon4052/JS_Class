@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer="";
+
+            for (let x of s) {
+                if ( x == x.toUpperCase()) {
+                    answer += x.toLowerCase();
+                }
+                else 
+                    answer += x.toUpperCase();
+            }
+
+            // s.split("").filter((a)=>{
+            //     if (a === a.toUpperCase()) answer += a.toLowerCase();
+            //     else answer += a.toUpperCase();
+            // })
+
+            return answer;
+        }
+        let str = "Mirim Meister School";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
