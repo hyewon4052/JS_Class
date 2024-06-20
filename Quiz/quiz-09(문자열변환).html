@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>문자열 변환(A를 #으로)</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            // 방법1 : for문을 이용
+            // let answer="";
+            // // console.log(s);
+            // for(let x of s) {
+            //     //console.log(x);
+            //     if(x==='A')
+            //         answer += '#';
+            //     else
+            //         answer += x;
+            // } // for
+            // return answer;
+
+            // 방법-2) replace()와 정규표현식을 이용
+            let answer = "";
+            //console.log(s);
+            answer = s.replace(/A/gi, '#');
+            return answer;
+        }
+        let str = "BANANA";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
+
+

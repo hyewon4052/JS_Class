@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>차량10부제</title>
+</head>
+<body>
+    <script>
+        function solution(day, arr) {
+            let answer=0;
+
+            for(let x of arr) {
+                // console.log(x);
+                if(x%10 === day)
+                    answer++;
+            }
+
+            return answer;
+        }
+        arr = [25, 23, 11, 47, 53, 17, 33]
+        console.log(solution(1, arr));
+    </script>
+</body>
+</html>

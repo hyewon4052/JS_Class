@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>가운데문자출력하기</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer="";
+            
+            let mid = Math.floor(s.length/2);   // mid =3 
+
+            // 방법1 : substring() 이용
+            // if(s.length % 2 ===1) {
+            //     answer = s.substring(mid, mid+1);
+            // }
+            // else {
+            //     answer = s.substring(mid-1, mid+1);
+            // }
+
+            // 방법2 : substr() 이용
+            if(s.length % 2 === 1) {
+                answer = s.substr(mid, 1);
+            }
+            else {
+                answer = s.substr(mid-1, 2);
+            }
+            return answer;
+        }
+        console.log(solution("study"));
+        console.log(solution("good"));
+        console.log(solution("teacher"));
+        console.log(solution("length"));
+    </script>
+</body>
+</html>
+
+

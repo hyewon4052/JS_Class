@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>중복문자제거하기</title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            // let answer="";
+            // console.log(s);
+
+            // indexOf() 함수를 이용
+            // console.log(s.indexOf('k'));
+            // console.log(s.indexOf('s'));
+            // console.log(s.indexOf('e'));
+            // console.log(s.indexOf('X'));
+            // console.log(s.indexOf('K'));
+            // console.log(s.indexOf('k', 1));
+
+            // for(let i=0; i<s.length; i++) {
+            //     // console.log(s[i], i, s.indexOf(s[i]));
+            //     if(i===s.indexOf(s[i]))
+            //         // console.log(s[i]);
+            //         answer += s[i];
+            // }
+            let answer = 0;
+            // alert("얘들아 이젠 마음을 좀 정해줘~ 백화점 가자");
+            let word = prompt("찾고자 하는 문자를 입력해주세요 : ");
+            // console.log(word);
+
+            let pos = s.indexOf(word);
+            // console.log(pos);
+
+            while(pos!== -1) {
+                answer++;
+                pos = s.indexOf(word, pos+1);
+            }
+            return answer;
+        }
+        // console.log(solution("ksekkset"));
+        console.log(solution("Computer Programming"));
+    </script>
+</body>
+</html>
+
+

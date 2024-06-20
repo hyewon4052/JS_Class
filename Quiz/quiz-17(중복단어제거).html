@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s) {
+            let answer = [];
+
+            // console.log(s.indexOf("good"));
+
+            // answer = s.filter(function(v, i) {
+            //     // console.log(v, i, s.indexOf(v));
+            //     // if(i === s.indexOf(v))
+            //     //     return true;
+            //     return i === s.indexOf(v);
+            // });
+
+            // arrow function 사용
+            answer = s.filter((v, i) => i === s.indexOf(v));
+           
+
+
+            return answer;
+        }
+        let str = ["good", "time", "good", "time", "student"];
+        console.log(solution(str));
+    </script>
+</body>
+</html>
+
+

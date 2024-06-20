@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>홀수</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = [];
+            let sum = 0, min = Number.MAX_SAFE_INTEGER;
+
+            for(let x of arr) {
+                // console.log(x);
+                if(x%2 === 1) {
+                    // console.log(x);
+                    sum += x;
+                    if(x<min) min = x;
+                }
+            } // for
+            // answer[0] = sum;
+            // answer[1] = min;
+
+            answer.push(sum);
+            answer.push(min);
+
+            return answer;
+        }
+        var arr = [12, 77, 36, 41, 53, 92, 85];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
