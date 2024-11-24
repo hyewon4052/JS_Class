@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>회문 문자열1</title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "Yes";
+
+            // // 방법1 : 직접 비교 방식
+            // str = str.toLowerCase();
+            // let len = str.length;
+            // for (let i = 0; i < Math.floor(len/2); i++) {
+            //     if (str[i]!== str[len-i-1]) return "No";
+            // }
+
+            // 방법2 : reverse()함수 이용
+            str = str.toLowerCase();
+            if (str !== str.split("").reverse().join("")) return answer = "No"; 
+            return answer;
+        }
+        let str = "gooG";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
+
+
