@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title>정규표현식 Regular Expression</title>
+</head>
+<body>
+    <script>
+    // 정규표현식 : /Pattern/modifier
+    
+    // var patt = /World/ig;
+
+    var str1 = "Hello world";
+    console.log(str1.search("World"));  // -1
+    console.log(str1.search(/World/));  // -1
+    console.log(str1.search(/World/i)); // 6, i : 대소문자 구분을 안함
+
+    var str2 = "Hello WORLD! world";
+    console.log(str2.replace(/World/ig,"Hong"));    // g : 전부 다 교체   
+
+    // var patt = /World/ig;
+    // console.log(str2.replace(patt,"Hong"));   
+
+    var str3 = "Is this all there is";
+    var patt1 = /[hat]/g;
+    var result1 = str3.match(patt1);    
+    console.log(result1.join(''));      // thath
+
+    // [0-9] : 0~9 사이의 모든 숫자를 찾음
+    var str4 = "adkl12fjjalk234dfjdfj4faknd5f5lksa56dfka5ejw36i";
+    var patt2 = /[0-9]/g;
+    var result2 = str4.match(patt2);
+    console.log(parseInt(result2.join("")));
+
+
+    var str5 = "re, green, red, gree, gen, red, blue, yellow";
+    var patt3 = /(red|green)/g;
+    var result3 = str5.match(patt3);
+    console.log(result3)
+
+
+    // \d : 숫자
+    
+    var str6 = "Please call 119 Hurry Up";
+    var patt4 = /\d/g;
+    var result4 = str6.match(patt4);
+    console.log(parseInt(result4.join("")));
+
+    // \s : 공백
+    var str7 = "Please call 119 Hurry Up";
+    var patt5 = /\s/g;
+    var result5 = str7.match(patt5);
+    console.log(result5);
+
+    var str8 = "HELLO, LOOK AT ME";
+    var patt6 = /\bLO/g;     // LO로 시작하는 단어를 찾음
+    var result6 = str8.search(patt6);
+    console.log(result6)    // 7
+
+    
+    // n+ : n이 최소한 1개 이상 (one or more)
+    var str9 = "HellooOo";
+    var patt7 = /o+/g;
+    console.log(str9.match(patt7));     //  ['oo', 'o']
+
+    
+    // n* : n이 zero or more
+    var str10 = "HellooOo World";
+    var patt8 = /lo*/g;     // l, loo, l
+    console.log(str10.match(patt8));
+
+
+    // n? : zero or one
+    var str11 = "1, 100 or 10000 or 1111";
+    var patt9 = /10?/g;
+    console.log(str11.match(patt9));    // 1, 10, 10, 1, 1, 1, 1
+
+    
+    // 실무 예 : 우편번호 5자리
+    // 32543 : 다섯자리인지 판별, 다섯자리 모두가 숫자인지 판별
+    var patt10 = /\d{5}/;    // 숫자 5자리 
+    var postalCode = "23452";       // true
+    postalCode = "P23452111"        // false
+    console.log(patt10.test(postalCode));   
+
+
+    // ^ : 문자열의 시작
+    // $ : 문자열의 끝
+    var patt11 = /^\d{5}$/;    // 숫자 5자리        
+    var postalCode = "23452";       // true
+    postalCode = "P23452111"        // false
+    console.log(patt10.test(postalCode));   
+
+
+    // 핸드폰 번호 : 010-1234-5678
+    var patt12 = /^(010)-\d{4}-\d{4}$/;
+    var postalCode = "010-1234-5678"
+    console.log(patt12.test(postalCode));
+
+    // 이메일주소 : gtgyujung@gmail.com
+
+    // \w : word 를 표현하며 알파벳 + 숫자 + _ 중의 한 문자
+    // var patt = /^\w+(._-?\w+)*@\w+(.\w{2,3})+$/;
+    var patt13 = /^\w+(._-?\w+)*@\w+(.\w{2,3})+/;
+    console.log(patt13.test("gtgyujung@gmail.com"))
+
+    </script>
+</body>
+</html>
