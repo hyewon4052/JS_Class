@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>class</title>
+</head>
+<body>
+    <script>
+        // 클래스 : 객체를 생성하기 위한 틀, 설계도
+        // 자동차 클래스
+
+        class Car {
+            constructor(modelName, modelYear, type, price){
+                this.modelName = modelName;
+                this.modelYear = modelYear;
+                this.type = type;
+                this.price = price;
+            };
+
+            // 객체가 정당한 권한을 부여해주면 그 기능을 수행하는 것
+            getModelName() {
+                return this.modelName;
+            }
+            getModelYear() {
+                return this.modelYear;
+            }
+            getType() {
+                return this.type;
+            }           
+            getPrice() {
+                return this.price;
+            }
+            setPrice(price) {
+                this.price = price;
+            }
+
+        } // Car
+
+        // let car = new Car("아이오닉",2022,"e",4000);    // 객체는 new한만큼 만들 수 있음
+        // console.log(car.getModelName());
+        // console.log(car.getModelYear());
+        // console.log(car.getPrice());
+        // car.setPrice(3500);
+        // console.log(car.getPrice());
+
+        // let car2 = new Car("옵티마","2000","g",2000);
+        // console.log(car2.getModelName());
+        // console.log(car2.getModelYear());
+        // console.log(car2.getPrice());
+        // car2.setPrice(100);
+        // console.log(car2.getPrice());
+
+        class ElectronicCar extends Car {
+            constructor (modelName, modelYear, price, time) {
+                super(modelName,modelYear,"e",price);
+                this.time = time;
+            }
+            getTime() {
+                return this.time;
+            }
+                
+            setTime(time) {
+                return this.time = time;
+            }
+
+        }
+        
+        let eleCar1 = new ElectronicCar("아이오닉2","2023",4800, 60);
+        console.log(eleCar1.getModelName());
+        console.log(eleCar1.getModelYear());
+        console.log(eleCar1.getPrice());
+        console.log(eleCar1.getType());
+        console.log(eleCar1.getTime());
+        eleCar1.setTime(20);
+        console.log(eleCar1.getTime());
+    </script>
+</body>
+</html>
