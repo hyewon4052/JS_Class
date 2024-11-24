@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        // function sum1(x1,x2){
+        //     y1 = x1 + x2;
+        //     console.log(y1);
+        //     return y1;
+        // }
+        
+        // function sum2(x1,x2,x3) {
+        //     var y2 = x1+x2+x3;
+        //     console.log(y2);
+        //     return y2;
+        // }
+
+        // function sum3(x1,x2,x3,x4) {
+        //     var y3 = x1+x2+x3+x4;
+        //     console.log(y3);
+        //     return y3;
+        // }
+
+        // sum1(2,3);
+        // sum2(1,2,3);
+        // sum3(1,2,3,4);
+
+
+        
+        // Rest Parameter
+        // function sum4(...args) {    // 매개변수를 배열로 받음
+        //     var total = 0
+        //     for (var i of args) {
+        //         total += i;
+        //     }
+        //     console.log(total)
+        // }
+
+        // sum4(1);
+        // sum4(2,3);
+        // sum4(1,2,3);
+
+        function sum5(...args) {
+            var total = 0;
+            args.forEach(function(x,i){     // (첫번째)x = 값, (두번째)i = 인덱스값
+                console.log("i = "+i+" x = "+x);
+                total += x;
+            });
+            console.log(total);
+        }
+
+        sum5(1);
+        sum5(2,3);
+        sum5(1,2,3);
+    </script>
+</body>
+</html>
