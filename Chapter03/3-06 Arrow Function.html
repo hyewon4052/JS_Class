@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        // function hello1() {
+        //     console.log("hello world1");
+        //     return "헬로우 월드1";
+        // }
+        // console.log(hello1());
+
+        // var hello2 = function() {
+        //     console.log("hello world2");
+        //     return "헬로우월드2";
+        // }
+        // console.log(hello2());
+
+
+        // => arrow function
+        // var hello3 = () => {
+        //     console.log("hello world3");
+        //     return "헬로우월드3";
+        // }
+        // hello3()
+
+        // var hello4 = () => {
+        //     return "헬로우월드4";
+        // }
+        // console.log(hello4());
+
+        // var hello4 = () => "헬로우월드4";
+        // console.log(hello4());
+
+        // var hello4 = (name) => {
+        //     return "헬로우월드4" + " " + name;
+        // }
+        // console.log(hello4("홍길동"));
+
+        // var hello4 = (name) => "헬로우월드4" + " " + name;
+        // console.log(hello4("홍길동"));
+
+        // var hello4 = (firstname,lastname) => "헬로우월드4" + " " + lastname + " " + firstname;
+        // console.log(hello4("길동","홍"));
+
+        var hello4 = name => "헬로우월드4" + " " + name;    // 파라미터가 한개일 때는 생략 가능
+        console.log(hello4("홍길동"));
+    </script>
+</body>
+</html>
