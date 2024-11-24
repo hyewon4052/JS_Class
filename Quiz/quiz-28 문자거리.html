@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>문자 거리</title>
+</head>
+<body>
+    <script>
+        function solution(s,t) {
+            let answer = [];
+            var p = 1000;
+
+            // 왼쪽부터 거리의 크기를 배열에 넣음
+            for (var i of s) {
+                if (i === t) p = 0;
+                else p += 1;
+                answer.push(p);
+            }   
+
+            // 오른쪽부터 거리의 크기를 구한뒤, 왼쪽값과 비교하여 작은값을 배열에 넣음
+            for(var i = s.length-1; i >= 0; i--) {
+                if (s[i] === t) p = 0;
+                else {
+                    p += 1;
+                    answer[i] = Math.min(answer[i],p);
+                }
+            }
+
+            return answer;
+        }
+        let str = "teachermode";
+        console.log(solution(str,"e"));
+    </script>
+</body>
+</html>
+
+
