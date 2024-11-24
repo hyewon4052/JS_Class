@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        // Spread Operator : 분해 기능
+        var arr1 = [4,5,6];
+        var arr2 = [1,2,3];
+        var arr3 = arr1.concat(arr2);   
+        console.log(arr3);  // 4,5,6,1,2,3
+
+        var arr4 = [4,5,6];
+        // var arr5 = [1,2,3,...arr4];
+        var arr5 = [1,2,...arr4,5,6];
+        console.log(arr5);
+
+        var arr7 = [4,5,6];
+        var arr8 = [1,2,3];
+        var arr9 = [...arr8,...arr7];
+        console.log(arr9);
+
+        var str = "CDEFG";
+        var alphabet = ['A','B',...str];    // 문자열도 분리
+        console.log(alphabet);
+
+
+    </script>
+</body>
+</html>
