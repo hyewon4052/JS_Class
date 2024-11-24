@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>try-catch finally</title>
+</head>
+<body>
+    <script>
+        // try{
+        //     consol.log("log 메세지");
+        // }
+        // catch(err) {
+        //     console.log(err.name);      // ReferenceError
+        //     console.log(err.message);   //consol is not defined
+        // }
+        // console.log("안녕하세요");
+        
+
+        // throw를 사용하여 강제로 예외를 발생시킴
+
+        var x = "";
+
+        try {
+            if (x === "") throw "empty";   
+            var y = x + 3;
+            console.log(y);
+        }
+        catch(err) {
+            console.log(`x is ${err}`)
+        }
+        finally {
+            console.log("exception 유무와 상관없이 무조건 실행됨")
+        }
+    </script>
+</body>
+</html>
