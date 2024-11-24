@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <script>
+        function getPerson() {
+            return {
+                firstName : "길동",
+                lastName : "홍",
+                age : 23,
+                email : "Hong@gamil.com",
+                city : "Seoul",
+                country : "Chosun"
+            }
+        }
+        // var per = getPerson();
+        // console.log(per);
+        // console.log(per.firstName);
+        // console.log(per.lastName);
+        
+        var { firstName, lastName } = getPerson();  // 내가 필요한 값만 가져오기
+        console.log(firstName);
+        console.log(lastName);
+        // console.log(city); -- 에러발생
+
+
+    </script>
+</body>
+</html>
