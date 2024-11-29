@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>ㅊ</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = 0, max = Number.MIN_SAFE_INTEGER;
+            
+            //insert code
+            for (var x of arr) {
+                // 방법 1 : while문 이용
+                // let sum = 0; temp = x;
+                // while(temp) {
+                //    sum += temp % 10;
+                //    temp = Math.floor(temp/10);
+                // }
+
+                // 방법 2 : 내장함수 이용
+
+                let sum = x.toString().split('').reduce((a,b)=> a + Number(b),0);   // 처음 초기값을 0으로 만듦
+
+
+                if (sum > max) {
+                  max = sum;
+                   answer = x;
+                }
+                else if (sum === max) {
+                    if (x > answer) answer = x;
+                }
+            }
+            return answer;
+        }
+        let arr = [7,460,128,603,40,521,137,123,1200];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
+
+
