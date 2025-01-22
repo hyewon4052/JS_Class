@@ -98,12 +98,12 @@
         // console.log(points.reverse());
 
         // object 정렬
-        var persons = [
-            {name:"유재석", point:78},
-            {name:"김종국", point:92},
-            {name:"양세찬", point:76},
-            {name:"하  하", point:81}
-        ];
+        // var persons = [
+        //     {name:"유재석", point:78},
+        //     {name:"김종국", point:92},
+        //     {name:"양세찬", point:76},
+        //     {name:"하  하", point:81}
+        // ];
 
         // console.log(persons.sort());   // object에는 정렬이 적용되지 않는다.
         // persons.sort(function(a,b) {
@@ -114,11 +114,11 @@
         // });
         // console.log(persons);
 
-        persons.sort(function(a,b) {
-            // 삼항연산자 이용
-            return a.point > b.point ? 1 : -1;
-        })
-        console.log(persons);
+        // persons.sort(function(a,b) {
+        //     // 삼항연산자 이용
+        //     return a.point > b.point ? 1 : -1;
+        // })
+        // console.log(persons);
 
         // ********** filter() : 조건에 맞는 배열만 리턴
 
@@ -169,17 +169,17 @@
 
         // map() : filter와는 다른 형태로 새로운 배열을 생성
         
-        // var userList = [
-        //     {fistName:"재석", lastName:"유", email:"yu@gmail.com"},
-        //     {fistName:"종국", lastName:"김", email:"kim@gmail.com"},
-        //     {fistName:"세찬", lastName:"양", email:"yang@gmail.com"},
-        //     {fistName:"석진", lastName:"지", email:"ji@gmail.com"}
-        // ]; 
+        var userList = [
+            {fistName:"재석", lastName:"유", email:"yu@gmail.com"},
+            {fistName:"종국", lastName:"김", email:"kim@gmail.com"},
+            {fistName:"세찬", lastName:"양", email:"yang@gmail.com"},
+            {fistName:"석진", lastName:"지", email:"ji@gmail.com"}
+        ]; 
 
-        // var userList2 = userList.map(function(user) {
-        //     return { fullName :user.lastName+ user.fistName, FN:user.fistName, IN:user.lastName }
-        // });
-        // console.log(userList2);
+        var userList2 = userList.map(function(user) {
+            return { fullName :user.lastName+ user.fistName, FN:user.fistName, IN:user.lastName }
+        });
+        console.log(userList2);
 </script>
 </body>
 </html>

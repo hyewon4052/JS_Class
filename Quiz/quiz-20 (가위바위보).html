@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>가위바위보</title>
+</head>
+<body>
+    <script>
+        function solution(a,b) {
+            let answer = [];
+
+            a.forEach(function(x,i){
+                if (x === b[i]) answer.push("D");
+                else if(x - b[i] === 1 || x - b[i] === -2) answer.push("A");
+                else answer.push("B");
+            })
+
+            return answer;
+        }
+        let a = [1, 3, 3, 1, 3];
+        let b = [3, 1, 2, 2, 3];
+        // A B A B D
+        // 1 : 가위, 2 : 바위, 3 : 보
+        // A : 2, 1 / 3, 2 / 1,3
+
+        // for (var x of solution(a,b)) {
+        //     console.log(x);
+        // }
+        
+        console.log(solution(a,b));
+    </script>
+</body>
+</html>
+
+

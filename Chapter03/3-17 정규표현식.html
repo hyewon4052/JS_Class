@@ -57,9 +57,9 @@
 
     
     // n+ : n이 최소한 1개 이상 (one or more)
-    var str9 = "HellooOo";
-    var patt7 = /o+/g;
-    console.log(str9.match(patt7));     //  ['oo', 'o']
+    var str9 = "HellooOll";
+    var patt7 = /lo+/g;
+    console.log(str9.match(patt7));    // ["loo"]
 
     
     // n* : n이 zero or more
@@ -87,7 +87,7 @@
     var patt11 = /^\d{5}$/;    // 숫자 5자리        
     var postalCode = "23452";       // true
     postalCode = "P23452111"        // false
-    console.log(patt10.test(postalCode));   
+    console.log(patt11.test(postalCode));   
 
 
     // 핸드폰 번호 : 010-1234-5678
@@ -96,7 +96,7 @@
     console.log(patt12.test(postalCode));
 
     // 이메일주소 : gtgyujung@gmail.com
-
+    // var patt = /^\w+(._-?\w+)*@\w+(.\w{2,3})+/;
     // \w : word 를 표현하며 알파벳 + 숫자 + _ 중의 한 문자
     // var patt = /^\w+(._-?\w+)*@\w+(.\w{2,3})+$/;
     var patt13 = /^\w+(._-?\w+)*@\w+(.\w{2,3})+/;
